@@ -4,11 +4,14 @@ import PizzaList from "../PizzaList/PizzaList";
 import { HashRouter as Router, Route, NavLink, Link, Switch } from "react-router-dom";
 import "./App.css";
 import CustomerForm from "../CustomerForm/CustomerForm.jsx";
+import CustomerDetails from "../Pages/CustomerDetails";
+import OrderPage from "../Pages/OrderPage";
+import Admin from "../Pages/Admin";
+import Checkout from "../Pages/Checkout";
 
 function App() {
   return (
     <div className="App">
-      <Header />
       <Router>
         <div className="nav-bar">
           <NavLink to="/">Za Home</NavLink>{" "}
@@ -18,16 +21,16 @@ function App() {
         </div>
         <Switch>
           <Route path="/info">
-            <CustomerForm />
+            <CustomerDetails />
           </Route>
           <Route path="/checkout">
-            {/* insert checkout component here */}
+            <Checkout />
           </Route>
           <Route path="/admin">
-            {/* insert admin component here */}
+            <Admin />
           </Route>
           <Route path="/">
-            <PizzaList />
+            <OrderPage />
           </Route>
         </Switch>
       </Router>
