@@ -11,7 +11,7 @@ function PizzaListItem({za}) {
   const handleClick = () => {
     // set added to the inverse of itself.
     setAdded(!added);
-    console.log(added); // current state of added at this point.
+    // console.log(added); // current state of added at this point.
     // set up the object to be dispatched.
     const newZa = {
       id: za.id,
