@@ -1,5 +1,13 @@
+import Header from "../Header/Header";
+import PizzaList from "../PizzaList/PizzaList";
+
 function OrderPage() {
-  return <h2>OrderPage</h2>;
+  return (
+    <>
+      <Header total={true} />
+      <PizzaList />
+    </>
+  );
 }
 
 export default OrderPage;

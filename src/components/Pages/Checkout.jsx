@@ -1,5 +1,13 @@
+import Header from "../Header/Header";
+import HeaderCheckoutTotal from "../HeaderCheckoutTotal/HeaderCheckoutTotal";
+
 function Checkout() {
-  return <h2>Checkout</h2>;
+  return (
+    <>
+      <Header total={false} />
+      <h2>Checkout</h2>
+    </>
+  );
 }
 
 export default Checkout;

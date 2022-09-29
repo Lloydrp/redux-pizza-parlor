@@ -1,9 +1,6 @@
 import React from "react";
-import Header from "../Header/Header";
-import PizzaList from "../PizzaList/PizzaList";
 import { HashRouter as Router, Route, NavLink, Link, Switch } from "react-router-dom";
 import "./App.css";
-import CustomerForm from "../CustomerForm/CustomerForm.jsx";
 import CustomerDetails from "../Pages/CustomerDetails";
 import OrderPage from "../Pages/OrderPage";
 import Admin from "../Pages/Admin";
