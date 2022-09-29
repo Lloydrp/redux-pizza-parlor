@@ -1,5 +1,14 @@
+import CustomerForm from "../CustomerForm/CustomerForm";
+import Header from "../Header/Header";
+
 function CustomerDetails() {
-  return <h2>CustomerDetails</h2>;
+
+  return ( 
+    <>
+  <Header total={true} />
+  <CustomerForm />
+  </>
+  )
 }
 
 export default CustomerDetails;
