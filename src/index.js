@@ -49,10 +49,20 @@ function orderInformationReducer(state = defaultOrder, action) {
   return state;
 }
 
+function adminReducer(state = [], action) {
+  if (action.type === "ADMIN_ADD") {
+    return [...state, action.payload];
+  } else if (action.type === "ADMIN_CLEAR") {
+    return [];
+  }
+  return state;
+}
+
 const storeInstance = createStore(
   combineReducers({
     pizzaList: pizzaListReducer,
     orderInformation: orderInformationReducer,
+    admin: adminReducer,
   }),
   applyMiddleware(logger)
 );
