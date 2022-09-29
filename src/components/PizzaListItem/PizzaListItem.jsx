@@ -15,7 +15,7 @@ function PizzaListItem({za}) {
     // set up the object to be dispatched.
     const newZa = {
       id: za.id,
-      quantity: za.quantity
+      quantity: 1
     }
     // handle dispatch based on boolean added.
     if(added === true) {
