@@ -9,7 +9,7 @@ function Admin() {
       <h2>AdminList Below:</h2>
       <div>
         {adminList.map(
-          (item) => `${item.name} ${item.time} ${item.type} ${item.cost}`
+          (item) => `${item.customer_name} ${item.time} ${item.type} ${item.total}`
         )}
       </div>
     </>
