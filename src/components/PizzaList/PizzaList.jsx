@@ -10,6 +10,8 @@ function PizzaList() {
   // set pizzaList to the list of pizza from the pizzaListReducer.
   const pizzaList = useSelector((store) => store.pizzaList);
 
+  const nextPage = '/info';
+
   // get the array of pizzas and send them to the reducer.
   const fetchZa = () => {
     axios
@@ -35,7 +37,7 @@ function PizzaList() {
       {pizzaList.map((za) => (
         <PizzaListItem key={za.id} za={za} />
       ))}
-      <NextButton />
+      <NextButton nextPage={nextPage}/>
     </section>
   );
 }
