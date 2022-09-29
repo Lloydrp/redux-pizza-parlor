@@ -31,7 +31,7 @@ function PizzaList() {
     <section>
       <h2>Step 1: Get Your Za, Broski!</h2>
       {pizzaList.map(za => (
-        <PizzaListItem za={za} />
+        <PizzaListItem key={za.id} za={za} />
       ))}
     </section>
   );
