@@ -5,8 +5,8 @@ import {useSelector, useDispatch} from 'react-redux';
 function PizzaList() {
   // declare useDispatch.
   const dispatch = useDispatch();
-
-  const pizzaList = useSelector(store => store.pizzaListReducer);
+  // set pizzaList to the list of pizza from the pizzaListReducer.
+  const pizzaList = useSelector(store => store.pizzaList);
 
 
   // get the array of pizzas and send them to the reducer.
