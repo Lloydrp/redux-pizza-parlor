@@ -6,14 +6,16 @@ function CustomerForm() {
   const [streetAddress, setStreetAddress] = useState("");
   const [city, setCity] = useState("");
   const [zipCode, setZipCode] = useState("");
+  const [delivery, setDelivery] = useState("");
 
   const nextPage = '/checkout';
 
   const payload = {
-    fullName,
-    streetAddress,
+    customer_name: fullName,
+    street_address: streetAddress,
     city,
-    zipCode,
+    zip: zipCode,
+    type: delivery
   }
 
   return (
@@ -46,14 +48,14 @@ function CustomerForm() {
           value={zipCode}
           onChange={(evt) => setZipCode(evt.target.value)}
         />
-      </div>    
-      <input type="radio" id="css" name="fav_language" value="CSS"></input>
-      <label for="css">PICKUP</label>
-      <input type="radio" id="css" name="fav_language" value="CSS"></input>
-      <label for="css">DELIVERY</label>
-      <NextButton nextPage={nextPage} payload={payload}/>
+      </div>
+      <input checked name="type"type="radio" id="pickup" value="pickup" onChange={(evt) => setDelivery(evt.target.value)}></input>
+      <label htmlFor="pickup">PICKUP</label>
+      <input name="type" type="radio" id="delivery" value="delivery" onChange={(evt) => setDelivery(evt.target.value)}></input>
+      <label htmlFor="delivery">DELIVERY</label>
+      <NextButton nextPage={nextPage} payload={payload} />
     </form>
-   
+
   );
 }
 

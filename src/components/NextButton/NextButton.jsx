@@ -13,7 +13,7 @@ function NextButton({nextPage, payload}) {
     event.preventDefault();
     // call function
     if(nextPage === '/checkout'){
-      if(!payload.fullName || !payload.streetAddress || !payload.city || !payload.zipCode) {
+      if(!payload.customer_name || !payload.street_address || !payload.city || !payload.zip) {
         alert('Please fill in the form.');
       } else {
         dispatch({
