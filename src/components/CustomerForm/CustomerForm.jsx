@@ -1,4 +1,3 @@
-import { useDispatch } from "react-redux";
 import { useState } from "react";
 import NextButton from "../NextButton/NextButton";
 
@@ -7,23 +6,18 @@ function CustomerForm() {
   const [streetAddress, setStreetAddress] = useState("");
   const [city, setCity] = useState("");
   const [zipCode, setZipCode] = useState("");
-  const dispatch = useDispatch;
 
-  const addCustomer = (event) => {
-    event.preventDefault();
-    dispatch({
-      type: "ADD_CUSTOMER_INFO",
-      payload: {
-        fullName,
-        streetAddress,
-        city,
-        zipCode,
-      },
-    });
-  };
+  const nextPage = '/checkout';
+
+  const payload = {
+    fullName,
+    streetAddress,
+    city,
+    zipCode,
+  }
 
   return (
-    <form onSubmit={addCustomer}>
+    <form>
       <h1> Step 2: Customer Information </h1>
       <div>
         <input
@@ -57,7 +51,7 @@ function CustomerForm() {
       <label for="css">PICKUP</label>
       <input type="radio" id="css" name="fav_language" value="CSS"></input>
       <label for="css">DELIVERY</label>
-      <NextButton />
+      <NextButton nextPage={nextPage} payload={payload}/>
     </form>
    
   );

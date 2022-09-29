@@ -44,7 +44,7 @@ function orderInformationReducer(state = defaultOrder, action) {
   } else if (action.type === "ADD_CUSTOMER_INFO") {
     return { ...state, ...action.payload };
   } else if (action.type === "CLEAR_ORDER") {
-    return {};
+    return defaultOrder;
   }
   return state;
 }
