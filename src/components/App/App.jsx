@@ -1,5 +1,5 @@
 import React from "react";
-import NextButton from "../NextButton/NextButton";
+import PizzaList from "../PizzaList/PizzaList";
 import "./App.css";
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
       </header>
       <img src="images/pizza_photo.png" />
       <p>Pizza is great.</p>
+      <PizzaList />
     </div>
   );
 }
