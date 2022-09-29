@@ -1,5 +1,4 @@
 import Header from "../Header/Header";
-import HeaderCheckoutTotal from "../HeaderCheckoutTotal/HeaderCheckoutTotal";
 
 function Checkout() {
   return (
