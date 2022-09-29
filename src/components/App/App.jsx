@@ -7,7 +7,7 @@ import CustomerForm from "../CustomerForm/CustomerForm.jsx";
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header total={true} />
       <CustomerForm />
       <PizzaList />
     </div>
