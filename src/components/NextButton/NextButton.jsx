@@ -2,7 +2,7 @@ import "./NextButton.css";
 
 function NextButton(props) {
   return (
-    <button onClick={props.function} className="next-button">
+    <button type="submit" onClick={props.function} className="next-button">
       Next
     </button>
   );

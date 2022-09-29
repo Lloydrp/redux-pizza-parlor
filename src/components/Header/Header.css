@@ -4,6 +4,8 @@
   padding: 20px;
   color: white;
   margin-bottom: 20px;
+  position: sticky;
+  top: 0;
 }
 
 .App-title {
