@@ -14,9 +14,16 @@ function pizzaListReducer(state = [], action) {
 
 function orderInformationReducer(state = {}, action) {
   if (action.type === "ADD_PIZZA_ORDER") {
+    return { ...state, pizzas: [...state.pizzas, action.payload] };
   } else if (action.type === "REMOVE_PIZZA_ORDER") {
+    //Need to find out how David is sending id - assuming he is just sending an ID
+    let newPizzaList = [...state.pizzas];
+    newPizzaList = newPizzaList.filter((item) => item.id !== action.payload);
+    return { ...state, pizzas: newPizzaList };
   } else if (action.type === "ADD_CUSTOMER_INFO") {
+    return { ...state, ...action.payload };
   } else if (action.type === "CLEAR_ORDER") {
+    return {};
   }
   return state;
 }

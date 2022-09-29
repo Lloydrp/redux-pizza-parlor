@@ -1,0 +1,17 @@
+.next-button {
+  width: 20vw;
+  height: 5vh;
+  background-color: rgb(51, 155, 189);
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
+  float: right;
+  margin-right: 5%;
+  min-width: 80px;
+}
+
+.next-button:hover {
+  background-color: white;
+  color: rgb(51, 155, 189);
+}
