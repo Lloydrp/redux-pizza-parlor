@@ -1,20 +1,36 @@
+import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import "./NextButton.css";
 
 
-function NextButton({nextPage}) {
+function NextButton({nextPage, payload}) {
   // get the history to push to routes.
   const history = useHistory();
+  const dispatch = useDispatch();
 
   // on click move to next page/route and call a props function.
-  const handleClick = () => {
-    history.push(nextPage);
+  const handleClick = (event) => {
+    event.preventDefault();
     // call function
-    
+    if(nextPage === '/checkout'){
+      if(!payload.fullName || !payload.streetAddress || !payload.city || !payload.zipCode) {
+        alert('Please fill in the form.');
+      } else {
+        dispatch({
+          type: "ADD_CUSTOMER_INFO",
+          payload
+        });
+        // only if the form is filled then push to next page.
+        history.push(nextPage);
+      }
+    } else {
+      // for any other page push to next page on click.
+      history.push(nextPage);
+    }
   }
 
   return (
-    <button type="submit" onClick={handleClick} className="next-button">
+    <button onClick={handleClick} className="next-button">
       Next 🤌
     </button>
   );

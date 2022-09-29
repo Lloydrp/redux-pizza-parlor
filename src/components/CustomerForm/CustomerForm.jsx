@@ -1,33 +1,23 @@
-import { useDispatch } from "react-redux";
 import { useState } from "react";
 import NextButton from "../NextButton/NextButton";
-import { useHistory } from "react-router-dom";
 
 function CustomerForm() {
   const [fullName, setFullName] = useState("");
   const [streetAddress, setStreetAddress] = useState("");
   const [city, setCity] = useState("");
   const [zipCode, setZipCode] = useState("");
-  const dispatch = useDispatch;
-  const history = useHistory();
 
   const nextPage = '/checkout';
 
-  const addCustomer = (event) => {
-    event.preventDefault();
-    dispatch({
-      type: "ADD_CUSTOMER_INFO",
-      payload: {
-        fullName,
-        streetAddress,
-        city,
-        zipCode,
-      },
-    });
-  };
+  const payload = {
+    fullName,
+    streetAddress,
+    city,
+    zipCode,
+  }
 
   return (
-    <form onSubmit={addCustomer}>
+    <form>
       <h1> Step 2: Customer Information </h1>
       <div>
         <input
@@ -57,7 +47,7 @@ function CustomerForm() {
           onChange={(evt) => setZipCode(evt.target.value)}
         />
       </div>
-      <NextButton nextPage={nextPage}/>
+      <NextButton nextPage={nextPage} payload={payload}/>
     </form>
   );
 }
