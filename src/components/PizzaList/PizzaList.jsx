@@ -29,7 +29,7 @@ function PizzaList() {
 
   return (
     <section>
-      <h2>Step 1: Get Your Za Broski!</h2>
+      <h2>Step 1: Get Your Za, Broski!</h2>
       {pizzaList.map(za => (
         <PizzaListItem za={za} />
       ))}
