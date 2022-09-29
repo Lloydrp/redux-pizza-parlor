@@ -1,7 +1,7 @@
 import React from "react";
 import PizzaList from "../PizzaList/PizzaList";
 import "./App.css";
-import CustomerForm from '../CustomerForm/CustomerForm.jsx;
+import CustomerForm from '../CustomerForm/CustomerForm.jsx';
 
 
 function App() {
