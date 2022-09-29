@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./components/App/App";
 import { Provider } from "react-redux";
-import { createStore, combineReducers, bindActionCreators } from "redux";
+import { createStore, combineReducers } from "redux";
 
 function pizzaListReducer(state = [], action) {
   if (action.type === "ADD_PIZZA_LIST") {
@@ -29,7 +29,7 @@ const storeInstance = createStore(
 );
 
 ReactDOM.render(
-  <Provider state={storeInstance}>
+  <Provider store={storeInstance}>
     <App />
   </Provider>,
   document.getElementById("root")
