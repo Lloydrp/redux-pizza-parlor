@@ -14,10 +14,11 @@ function pizzaListReducer(state = [], action) {
 }
 
 const defaultOrder = {
-  fullName: "",
-  streetAddress: "",
+  customer_name: "",
+  street_address: "",
   city: "",
-  zipCode: 0,
+  zip: 0,
+  type: "",
   total: 0,
   pizzas: [],
 };

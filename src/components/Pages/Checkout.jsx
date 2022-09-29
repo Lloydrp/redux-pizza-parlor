@@ -11,15 +11,16 @@ function Checkout() {
   const pizzaList = useSelector((store) => store.pizzaList);
 
   function clickHandler() {
+    const date = new Date();
     //Post request
     //Admin
     dispatch({
       type: "ADMIN_ADD",
       payload: {
-        name: orderInfo.customer_name,
-        time: DateTime.Now.ToString("ddd, dd MMM yyy HH':'mm':'ss 'CST'"),
+        customer_name: orderInfo.customer_name,
+        time: `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`,
         type: orderInfo.type,
-        cost: orderInfo.total,
+        total: orderInfo.total,
       },
     });
     //Clear State
