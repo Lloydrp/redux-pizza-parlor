@@ -1,6 +1,8 @@
 import React from "react";
 import PizzaList from "../PizzaList/PizzaList";
 import "./App.css";
+import CustomerForm from '../CustomerForm/CustomerForm.jsx;
+
 
 function App() {
   return (
@@ -11,7 +13,9 @@ function App() {
 
       <img src="images/pizza_photo.png" />
       <p>Pizza is great.</p>
+      <CustomerForm />
       <PizzaList />
+
     </div>
   );
 }
