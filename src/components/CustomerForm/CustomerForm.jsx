@@ -52,9 +52,14 @@ function CustomerForm() {
           value={zipCode}
           onChange={(evt) => setZipCode(evt.target.value)}
         />
-      </div>
+      </div>    
+      <input type="radio" id="css" name="fav_language" value="CSS"></input>
+      <label for="css">PICKUP</label>
+      <input type="radio" id="css" name="fav_language" value="CSS"></input>
+      <label for="css">DELIVERY</label>
       <NextButton />
     </form>
+   
   );
 }
 
