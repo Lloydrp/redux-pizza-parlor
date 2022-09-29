@@ -1,40 +1,37 @@
 import React from "react";
-import Header from "../Header/Header";
-import CustomerDetails from "../Pages/CustomerDetails";
-import PizzaList from "../PizzaList/PizzaList";
+import { HashRouter as Router, Route, NavLink, Link, Switch } from "react-router-dom";
 import "./App.css";
-
-
-
-
-
+import CustomerDetails from "../Pages/CustomerDetails";
+import OrderPage from "../Pages/OrderPage";
+import Admin from "../Pages/Admin";
+import Checkout from "../Pages/Checkout";
 
 function App() {
   return (
     <div className="App">
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   </div>
+      <Router>
+        <div className="nav-bar">
+          <NavLink to="/">Za Home</NavLink>{" "}
+          <NavLink to="/info">Your Info</NavLink>{" "}
+          <NavLink to="/checkout">Checkout</NavLink>{" "}
+          <NavLink to="/admin">Za Admin</NavLink>
+        </div>
+        <Switch>
+          <Route path="/info">
+            <CustomerDetails />
+          </Route>
+          <Route path="/checkout">
+            <Checkout />
+          </Route>
+          <Route path="/admin">
+            <Admin />
+          </Route>
+          <Route path="/">
+            <OrderPage />
+          </Route>
+        </Switch>
+      </Router>
+    </div>
   );
 }
 
