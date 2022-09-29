@@ -1,7 +1,5 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import logger from 'redux-logger';
-import { applyMiddleware } from 'redux';
 
 function CustomerForm() {
   const [fullName, setFullName] = useState('');
@@ -9,11 +7,9 @@ function CustomerForm() {
   const [city, setCity] = useState('');
   const [zipCode, setZipCode] = useState('');
   const dispatch = useDispatch;
- const handleSubmit =(event) => {
-  event.preventDefault();
- }
 
- const addCustomer = () => {
+ const addCustomer = (event) => {
+   event.preventDefault();
   dispatch({
     type: 'ADD_CUSTOMER_INFO',
     payload:{ 
@@ -21,13 +17,11 @@ function CustomerForm() {
     streetAddress,
     city, 
     zipCode}
-  })
-  applyMiddleware(logger)
+  });
  }
 
- 
   return (
-    <form>
+    <form onSubmit={addCustomer}>
       <h1> Step 2: Customer Information </h1>
       <div>
       <input 
@@ -57,7 +51,7 @@ function CustomerForm() {
         onChange={(evt) => setZipCode(evt.target.value)}
       /> 
       </div>
-      <button onClick={addCustomer}> NEXT </button>
+      <button type="submit"> NEXT </button>
       </form>
   );
 }
