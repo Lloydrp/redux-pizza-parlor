@@ -1,7 +1,7 @@
 .za-item-container {
     border: 2px solid #FF0024;
     border-radius: 2px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     transition: all 0.3s ease-in-out;
     background-color: #fff;
     user-select: none;
@@ -56,5 +56,6 @@ hr {
 .price {
     text-align: right;
     padding-right: 5px;
+    font-size: 150%;
 }
 
