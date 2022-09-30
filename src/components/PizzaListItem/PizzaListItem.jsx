@@ -48,7 +48,6 @@ function PizzaListItem({ za }) {
             <h3>{za.name}</h3>
             <p>{za.description}</p>
           </div>
-          <div className="column-break"></div>
           <p className="price">{za.price}</p>
       </div>
       <button onClick={() => handleClick()}>{added ? "Add" : "Remove"}</button>
