@@ -1,8 +1,7 @@
 .za-item-container {
-    border: 2px solid #FF0024;
-    border-radius: 2px;
-    /* margin-bottom: 30px; */
-    margin: 0 2% 35px 2%;
+    border: 4px solid #FF0024;
+    border-radius: 4px;
+    margin: 0 2% 40px 2%;
     transition: all 0.3s ease-in-out;
     background-color: #fff;
     user-select: none;
@@ -24,6 +23,7 @@
     width: 100%;
     outline: none;
     border: none;
+    border-top: 2px solid #669F21;
     cursor: pointer;
     font-size: 150%;
 }
@@ -41,7 +41,7 @@ hr {
 }
 
 .za-item-textbox {
-    height: 176px;
+    height: 143px;
     display: flex;
     flex-direction: column;
     flex: 1;
