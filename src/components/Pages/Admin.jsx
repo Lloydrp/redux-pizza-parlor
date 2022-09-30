@@ -62,20 +62,22 @@ function Admin() {
       <Header total={false} />
       <h2>AdminList Below:</h2>
       <div className="container">
-        <table className="admin-table">
-          <tbody>
-            {adminOrders.map((item) => (
-              <tr
-                className="admin-row"
-                key={item.id}
-                onClick={() =>
-                  clicked === item.id ? setClicked("") : setClicked(item.id)
-                }
-              >
-                <td>{item.customer_name}</td>
-                <td>{item.time}</td>
-                <td>{item.type}</td>
-                <td>{item.total}</td>
+        <div>
+          {adminOrders.map((item) => (
+            <div
+              className="admin-table"
+              key={item.id}
+              onClick={() =>
+                clicked === item.id ? setClicked("") : setClicked(item.id)
+              }
+            >
+              <div className="table-item">{`
+              ${item.customer_name} 
+              ${item.time} 
+              ${item.type} 
+              ${item.total} 
+        `}</div>
+              <div className="order-details">
                 <AdminDetails
                   adminDetails={adminDetails}
                   localPizzaList={localPizzaList}
@@ -83,10 +85,10 @@ function Admin() {
                   clicked={clicked}
                   setClicked={setClicked}
                 />
-              </tr>
-            ))}
-          </tbody>
-        </table>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
