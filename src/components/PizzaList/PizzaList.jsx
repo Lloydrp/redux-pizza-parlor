@@ -39,8 +39,8 @@ function PizzaList() {
         {pizzaList.map((za) => (
           <PizzaListItem key={za.id} za={za} />
         ))}
-        <NextButton nextPage={nextPage}/>
       </div>
+      <NextButton nextPage={nextPage}/>
     </section>
   );
 }
