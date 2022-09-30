@@ -1,6 +1,10 @@
+import './Footer.css';
+
 function Footer () {
     return(
-        <h1>Cool Sauce</h1>
+        <footer>
+            <h1>Za' Dudes Pizza Inc Ⓒ 2022</h1>
+        </footer>
     );
 }
 

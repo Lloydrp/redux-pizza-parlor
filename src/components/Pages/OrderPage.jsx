@@ -1,3 +1,4 @@
+import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import PizzaList from "../PizzaList/PizzaList";
 
@@ -6,6 +7,7 @@ function OrderPage() {
     <>
       <Header total={true} />
       <PizzaList />
+      <Footer />
     </>
   );
 }
