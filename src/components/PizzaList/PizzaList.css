@@ -1,0 +1,11 @@
+section {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.za-list-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
