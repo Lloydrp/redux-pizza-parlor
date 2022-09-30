@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import NextButton from "../NextButton/NextButton";
 import PizzaListItem from "../PizzaListItem/PizzaListItem";
+import './PizzaList.css';
 
 function PizzaList() {
   // declare useDispatch.

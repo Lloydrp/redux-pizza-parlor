@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import './PizzaListItem.css';
 
 function PizzaListItem({ za }) {
   // local use state to check if a za item was added to cart.
