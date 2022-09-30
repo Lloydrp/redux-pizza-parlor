@@ -13,6 +13,11 @@
     transform: scale(1.1);
 }
 
+.za-content-container img {
+    width: 250px;
+    height: 250px;
+}
+
 .za-item-container button {
     height: 20px;
     width: 100%;
@@ -25,11 +30,6 @@
     width: 250px;
     padding-top: 5px;
     font-size: 50%;
-}
-
-.za-content-container img {
-    width: 250px;
-    height: 150px;
 }
 
 hr {
