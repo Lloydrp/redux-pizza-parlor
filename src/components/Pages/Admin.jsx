@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import AdminDetails from "../AdminDetails/AdminDetails";
 import Header from "../Header/Header";
+import "./Admin.css";
 
 function Admin() {
   const [adminOrders, setAdminOrders] = useState([]);
@@ -34,7 +35,18 @@ function Admin() {
     axios
       .get("/api/order")
       .then((result) => {
-        setAdminOrders(result.data);
+        const updatedArray = result.data.map(
+          (item) =>
+            (item = {
+              ...item,
+              time:
+                new Date(item.time).toLocaleDateString() +
+                " " +
+                new Date(item.time).toLocaleTimeString(),
+            })
+        );
+        console.log("updatedArray :>> ", updatedArray);
+        setAdminOrders(updatedArray);
       })
       .catch((error) => {
         console.log("error caught in order get :>> ", error);
@@ -49,24 +61,32 @@ function Admin() {
     <>
       <Header total={false} />
       <h2>AdminList Below:</h2>
-      <div>
-        {adminOrders.map((item) => (
-          <div
-            key={item.id}
-            onClick={() =>
-              clicked === item.id ? setClicked("") : setClicked(item.id)
-            }
-          >
-            {item.customer_name} {item.time} {item.type} {item.total}
-            <AdminDetails
-              adminDetails={adminDetails}
-              localPizzaList={localPizzaList}
-              item={item}
-              clicked={clicked}
-              setClicked={setClicked}
-            />
-          </div>
-        ))}
+      <div className="container">
+        <table className="admin-table">
+          <tbody>
+            {adminOrders.map((item) => (
+              <tr
+                className="admin-row"
+                key={item.id}
+                onClick={() =>
+                  clicked === item.id ? setClicked("") : setClicked(item.id)
+                }
+              >
+                <td>{item.customer_name}</td>
+                <td>{item.time}</td>
+                <td>{item.type}</td>
+                <td>{item.total}</td>
+                <AdminDetails
+                  adminDetails={adminDetails}
+                  localPizzaList={localPizzaList}
+                  item={item}
+                  clicked={clicked}
+                  setClicked={setClicked}
+                />
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </>
   );
