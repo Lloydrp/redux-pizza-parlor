@@ -25,6 +25,7 @@ function Checkout() {
         console.log("error found in POST", error);
       });
   }
+  console.log("history.length :>> ", history.length);
 
   return (
     <>

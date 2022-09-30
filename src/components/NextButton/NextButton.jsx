@@ -2,8 +2,7 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import "./NextButton.css";
 
-
-function NextButton({nextPage, payload}) {
+function NextButton({ nextPage, payload }) {
   // get the history to push to routes.
   const history = useHistory();
   const dispatch = useDispatch();
@@ -12,22 +11,27 @@ function NextButton({nextPage, payload}) {
   const handleClick = (event) => {
     event.preventDefault();
     // call function
-    if(nextPage === '/checkout'){
-      if(!payload.customer_name || !payload.street_address || !payload.city || !payload.zip) {
-        alert('Please fill in the form.');
+    if (nextPage === "/checkout") {
+      if (
+        !payload.customer_name ||
+        !payload.street_address ||
+        !payload.city ||
+        !payload.zip
+      ) {
+        alert("Please fill in the form.");
       } else {
         dispatch({
           type: "ADD_CUSTOMER_INFO",
-          payload
+          payload,
         });
-        // only if the form is filled then push to next page.
-        history.push(nextPage);
+        // only if the form is filled then replace to next page.
+        history.replace(nextPage);
       }
     } else {
-      // for any other page push to next page on click.
-      history.push(nextPage);
+      // for any other page replace to next page on click.
+      history.replace(nextPage);
     }
-  }
+  };
 
   return (
     <button onClick={handleClick} className="next-button">
