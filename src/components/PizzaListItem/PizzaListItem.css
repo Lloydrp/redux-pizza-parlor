@@ -21,11 +21,18 @@
 .za-item-container button {
     height: 50px;
     width: 100%;
+    background-color: #669F21;
+    color: #fff;
     outline: none;
     border: none;
-    border-top: 2px solid #669F21;
+    border-top: 3px solid #CCD744;
     cursor: pointer;
     font-size: 150%;
+}
+
+.za-item-container button:hover {
+    background-color: #e3f11b;
+    color: #000;
 }
 
 .za-content-container {
