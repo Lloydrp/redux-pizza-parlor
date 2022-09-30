@@ -33,24 +33,30 @@ function Checkout() {
       <Header total={false} />
       <h2>Step 3: Checkout</h2>
       <div>Customer Info and Type</div>
-      <table>
-        <thead>
-          <tr>
-            <th>Pizza Ordered</th>
-            <th>Cost</th>
-          </tr>
-        </thead>
-        <tbody>
-          {orderInfo.pizzas.map((item, index) => (
-            <tr key={index}>
-              <td>{pizzaList[item.id - 1].name}</td>
-              <td>{pizzaList[item.id - 1].price}</td>
+      <div className="container">
+        <table>
+          <thead>
+            <tr>
+              <th>Pizza Ordered</th>
+              <th>Cost</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-      <div>Total: {orderInfo.total}</div>
-      <button onClick={clickHandler}>Checkout</button>
+          </thead>
+          <tbody>
+            {orderInfo.pizzas.map((item, index) => (
+              <tr key={index}>
+                <td>{pizzaList[item.id - 1].name}</td>
+                <td>{pizzaList[item.id - 1].price}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div className="container2">
+        <div className="float-right">Total: {orderInfo.total}</div>
+        <button className="float-right" onClick={clickHandler}>
+          Checkout
+        </button>
+      </div>
       <Footer />
     </>
   );
