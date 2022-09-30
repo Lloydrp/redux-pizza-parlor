@@ -1,0 +1,16 @@
+.inputs{
+    position: relative;
+    
+}
+
+.radio_buttons{
+    position: absolute;
+    top: 15.8em;
+    right: 19em;
+}
+
+.nextButton{
+    position: absolute;
+    bottom: 3em;
+    right: 3em
+}
