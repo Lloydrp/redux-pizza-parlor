@@ -13,20 +13,17 @@ function Checkout() {
   function clickHandler() {
     const date = new Date();
     //Post request
-    //Admin
-    dispatch({
-      type: "ADMIN_ADD",
-      payload: {
-        customer_name: orderInfo.customer_name,
-        time: `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`,
-        type: orderInfo.type,
-        total: orderInfo.total,
-      },
-    });
-    //Clear State
-    dispatch({ type: "CLEAR_ORDER" });
-    //History Push
-    history.replace("/");
+    orderInfo.time = `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
+
+    axios
+      .post("/api/order", orderInfo)
+      .then((result) => {
+        dispatch({ type: "CLEAR_ORDER" });
+        history.replace("/");
+      })
+      .catch((error) => {
+        console.log("error found in POST", error);
+      });
   }
 
   return (
