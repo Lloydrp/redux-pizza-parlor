@@ -32,3 +32,11 @@ CREATE TABLE "line_item" (
 	"pizza_id" INT REFERENCES "pizza",
 	"quantity" INT NOT NULL
 );
+
+UPDATE "pizza" SET "image_path"='images/tomato-soup-pizza.png' WHERE "id"=1;
+UPDATE "pizza" SET "image_path"='images/onomato-pizza.png' WHERE "id"=2;
+UPDATE "pizza" SET "image_path"='images/pepperoni-pizza.png' WHERE "id"=3;
+UPDATE "pizza" SET "image_path"='images/over-the-rainbow-pizza.png' WHERE "id"=4;
+UPDATE "pizza" SET "image_path"='images/chinese-fire-dragon-pizza.png' WHERE "id"=5;
+UPDATE "pizza" SET "image_path"='images/bad-date-pizza.png' WHERE "id"=6;
+UPDATE "pizza" SET "image_path"='images/little-heart-pizza.png' WHERE "id"=7;

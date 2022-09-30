@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import NextButton from "../NextButton/NextButton";
 import PizzaListItem from "../PizzaListItem/PizzaListItem";
+import './PizzaList.css';
 
 function PizzaList() {
   // declare useDispatch.
@@ -34,10 +35,12 @@ function PizzaList() {
   return (
     <section>
       <h2>Step 1: Get Your Za, Broski!</h2>
-      {pizzaList.map((za) => (
-        <PizzaListItem key={za.id} za={za} />
-      ))}
-      <NextButton nextPage={nextPage}/>
+      <div className="za-list-container">
+        {pizzaList.map((za) => (
+          <PizzaListItem key={za.id} za={za} />
+        ))}
+        <NextButton nextPage={nextPage}/>
+      </div>
     </section>
   );
 }

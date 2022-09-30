@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import './PizzaListItem.css';
 
 function PizzaListItem({ za }) {
   // local use state to check if a za item was added to cart.
@@ -40,11 +41,16 @@ function PizzaListItem({ za }) {
   // console.log(added);
 
   return (
-    <div className="za-container">
-      <p>{za.name}</p>
-      <img src={za.image_path} alt="Just a spicy pic of some za." />
-      <p>{za.description}</p>
-      <p>{za.price}</p>
+    <div className="za-item-container">
+      <div className="za-content-container">
+        <img src={za.image_path} alt="Just a spicy pic of some za." />
+        <hr />
+        <div className="za-item-textbox">
+            <h3 className="za-content-header">{za.name}</h3>
+            <p>{za.description}</p>
+            <p className="price">{za.price}</p>
+        </div>
+      </div>
       <button onClick={() => handleClick()}>{added ? "Add" : "Remove"}</button>
     </div>
   );

@@ -10,12 +10,6 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <div className="nav-bar">
-          <NavLink to="/">Za Home</NavLink>{" "}
-          <NavLink to="/info">Your Info</NavLink>{" "}
-          <NavLink to="/checkout">Checkout</NavLink>{" "}
-          <NavLink to="/admin">Za Admin</NavLink>
-        </div>
         <Switch>
           <Route path="/info">
             <CustomerDetails />
