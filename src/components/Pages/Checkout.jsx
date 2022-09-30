@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import "./Checkout.css";
 
@@ -56,6 +57,7 @@ function Checkout() {
           Checkout
         </button>
       </div>
+      <Footer />
     </>
   );
 }

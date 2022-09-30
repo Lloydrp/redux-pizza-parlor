@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import AdminDetails from "../AdminDetails/AdminDetails";
+import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import "./Admin.css";
 

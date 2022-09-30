@@ -1,4 +1,5 @@
 import CustomerForm from "../CustomerForm/CustomerForm";
+import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 
 function CustomerDetails() {
@@ -7,6 +8,7 @@ function CustomerDetails() {
     <>
   <Header total={true} />
   <CustomerForm />
+  <Footer />
   </>
   )
 }
