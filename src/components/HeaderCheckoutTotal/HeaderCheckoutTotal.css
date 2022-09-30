@@ -9,3 +9,7 @@
 .checkout-ptag {
   font-size: 2rem;
 }
+
+.checkout-ptag:hover, .checkout-total:hover {
+  color: #FF0024;
+}
