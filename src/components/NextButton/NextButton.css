@@ -1,7 +1,7 @@
 .next-button {
   width: 20vw;
   height: 5vh;
-  background-color: #FF0024;
+  background-color: #ff0024;
   border-radius: 10px;
   font-weight: bold;
   font-size: 1.5rem;
@@ -9,10 +9,11 @@
   float: right;
   margin-right: 5%;
   min-width: 80px;
+  margin-bottom: 20%;
 }
 
 .next-button:hover {
-  background-color: #E00024;
-  color: #FFFF40;
+  background-color: #e00024;
+  color: #ffff40;
   cursor: pointer;
 }

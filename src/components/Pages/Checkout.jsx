@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import "./Checkout.css";
 
@@ -51,13 +50,12 @@ function Checkout() {
           </tbody>
         </table>
       </div>
-      <div className="container2">
+      <div className="">
         <div className="float-right">Total: {orderInfo.total}</div>
         <button className="float-right" onClick={clickHandler}>
           Checkout
         </button>
       </div>
-      <Footer />
     </>
   );
 }

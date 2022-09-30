@@ -1,38 +1,32 @@
-.inputs{
-    position: absolute;
-    top: 13.5em;
-    left: 5em;
-    width: 400px;
+.inputs {
+  top: 13.5em;
+  left: 5em;
+  width: 400px;
+  margin-bottom: 5%;
 }
 
-.fullName{
-    width: 250px;
-    height: 20px;
+.fullName {
+  width: 250px;
+  height: 20px;
 }
 
-.address{
-    width: 250px;
-    height: 20px;
+.address {
+  width: 250px;
+  height: 20px;
 }
 
-.city{
-    width: 250px;
-    height: 20px;
+.city {
+  width: 250px;
+  height: 20px;
 }
 
-.zipCode{
-    width: 250px;
-    height: 20px;
+.zipCode {
+  width: 250px;
+  height: 20px;
 }
 
-.radio_buttons{
-    position: absolute;
-    top: 15.8em;
-    right: 19em;
-}
-
-.nextButton{
-    position: absolute;
-    bottom: 13em;
-    right: 3em
+.radio_buttons {
+  padding-top: 7%;
+  top: 15.8em;
+  right: 19em;
 }
