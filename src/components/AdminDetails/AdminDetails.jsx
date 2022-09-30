@@ -5,22 +5,30 @@ import { useSelector } from "react-redux";
 
 function AdminDetails({ item }) {
   const [adminDetails, setAdminDetails] = useState([]);
-  const pizzaList = useSelector((store) => store.pizzaList);
+  const [localPizzaList, setLocalPizzaList] = useState([]);
+
+  const fetchZa = () => {
+    axios
+      .get("/api/pizza")
+      .then((response) => {
+        setLocalPizzaList(response.data);
+      })
+      .catch((err) => console.log("Error getting za", err));
+  };
 
   function getAdminDetails() {
     axios
       .get("/api/order/lineitem")
       .then((result) => {
         setAdminDetails(result.data);
-        console.log("result.data :>> ", result.data);
       })
       .catch((error) => {
         console.log("error caught in get lineitems :>> ", error);
       });
   }
-  console.log("pizzaList :>> ", pizzaList);
 
   useEffect(() => {
+    fetchZa();
     getAdminDetails();
   }, []);
   return (
@@ -29,7 +37,9 @@ function AdminDetails({ item }) {
       <div>Pizzas Ordered:</div>
       {adminDetails.map((pizza) => (
         <li key={pizza.id}>
-          {pizza.order_id === item.id ? pizzaList[pizza.pizza_id - 1].name : ""}
+          {pizza.order_id === item.id
+            ? localPizzaList[pizza.pizza_id - 1].name
+            : ""}
         </li>
       ))}
     </div>
