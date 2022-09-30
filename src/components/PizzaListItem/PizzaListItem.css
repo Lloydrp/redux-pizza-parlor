@@ -2,7 +2,7 @@
     border: 2px solid #FF0024;
     border-radius: 2px;
     /* margin-bottom: 30px; */
-    margin: 0 2% 30px 2%;
+    margin: 0 2% 35px 2%;
     transition: all 0.3s ease-in-out;
     background-color: #fff;
     user-select: none;
@@ -25,11 +25,11 @@
     outline: none;
     border: none;
     cursor: pointer;
+    font-size: 150%;
 }
 
 .za-content-container {
     width: 350px;
-    padding-top: 5px;
 }
 
 hr {
