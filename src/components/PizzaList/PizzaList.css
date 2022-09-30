@@ -1,11 +1,16 @@
 section {
-    width: 85%;
-    margin: 0 auto;
+    width: 86%;
+    margin: 0 15%;
+}
+
+section h2 {
+    position: relative;
+    right: 12%;
 }
 
 .za-list-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }

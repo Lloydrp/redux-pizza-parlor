@@ -1,7 +1,8 @@
 .za-item-container {
     border: 2px solid #FF0024;
     border-radius: 2px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
+    margin: 0 2% 30px 2%;
     transition: all 0.3s ease-in-out;
     background-color: #fff;
     user-select: none;
@@ -14,12 +15,12 @@
 }
 
 .za-content-container img {
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
 }
 
 .za-item-container button {
-    height: 20px;
+    height: 50px;
     width: 100%;
     outline: none;
     border: none;
@@ -27,9 +28,8 @@
 }
 
 .za-content-container {
-    width: 250px;
+    width: 350px;
     padding-top: 5px;
-    font-size: 50%;
 }
 
 hr {
@@ -41,21 +41,21 @@ hr {
 }
 
 .za-item-textbox {
-    height: 112px;
+    height: 176px;
     display: flex;
     flex-direction: column;
-    flex-basis: 100%;
     flex: 1;
 }
 
 .za-content-header {
     text-align: left;
+    margin: 0;
     padding-left: 5px;
 }
 
 .price {
     text-align: right;
-    padding-right: 5px;
+    margin: 0 5% 5px auto;
     font-size: 150%;
 }
 
