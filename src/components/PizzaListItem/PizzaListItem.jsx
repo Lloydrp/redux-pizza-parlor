@@ -42,10 +42,12 @@ function PizzaListItem({ za }) {
 
   return (
     <div className="za-item-container">
-      <p>{za.name}</p>
       <img src={za.image_path} alt="Just a spicy pic of some za." />
-      <p>{za.description}</p>
-      <p>{za.price}</p>
+      <div className="za-item-textbox">
+        <p>{za.name}</p>
+        <p>{za.description}</p>
+        <p>{za.price}</p>
+      </div>
       <button onClick={() => handleClick()}>{added ? "Add" : "Remove"}</button>
     </div>
   );

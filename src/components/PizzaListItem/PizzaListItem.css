@@ -1,5 +1,8 @@
 .za-item-container {
     width: 300px;
+    margin-bottom: 10px;
+
+    font-size: 50%;
 }
 
 .za-item-container img {
