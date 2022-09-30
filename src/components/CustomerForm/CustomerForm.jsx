@@ -28,6 +28,7 @@ function CustomerForm() {
       <label>
         <input
           placeholder="Full Name"
+          className="fullName"
           value={fullName}
           onChange={(evt) => setFullName(evt.target.value)}
         />
@@ -37,6 +38,7 @@ function CustomerForm() {
       <label>
         <input
           placeholder="Address"
+          className="address"
           value={streetAddress}
           onChange={(evt) => setStreetAddress(evt.target.value)}
         />
@@ -46,6 +48,7 @@ function CustomerForm() {
       <label>
         <input
           placeholder="City"
+          className="city"
           value={city}
           onChange={(evt) => setCity(evt.target.value)}
         />
@@ -55,6 +58,7 @@ function CustomerForm() {
       <label>
         <input
           placeholder="Zip Code"
+          className="zipCode"
           value={zipCode}
           onChange={(evt) => setZipCode(evt.target.value)}
         />
