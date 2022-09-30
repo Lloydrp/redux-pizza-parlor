@@ -10,3 +10,19 @@
     height: 150px;
 }
 
+.za-item-textbox {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.price {
+    text-align: right;
+}
+
+.column-break {
+    flex-basis: 100%;
+    width: 0;
+}
+
