@@ -35,13 +35,12 @@ function AdminDetails({ item }) {
     <div>
       {item.street_address} {item.city} {item.zip}
       <div>Pizzas Ordered:</div>
-      {adminDetails.map((pizza) => (
-        <li key={pizza.id}>
-          {pizza.order_id === item.id
-            ? localPizzaList[pizza.pizza_id - 1].name
-            : ""}
-        </li>
-      ))}
+      {adminDetails.map(
+        (pizza) =>
+          pizza.order_id === item.id && (
+            <li key={pizza.id}>{localPizzaList[pizza.pizza_id - 1].name}</li>
+          )
+      )}
     </div>
   );
 }
