@@ -7,7 +7,7 @@ function CustomerForm() {
   const [streetAddress, setStreetAddress] = useState("");
   const [city, setCity] = useState("");
   const [zipCode, setZipCode] = useState("");
-  const [delivery, setDelivery] = useState("");
+  const [delivery, setDelivery] = useState("Pickup");
 
   const nextPage = "/checkout";
 
@@ -72,10 +72,10 @@ function CustomerForm() {
               name="type"
               type="radio"
               id="pickup"
-              value="pickup"
+              value="Pickup"
               onChange={(evt) => setDelivery(evt.target.value)}
             ></input>
-            <label htmlFor="pickup">PICKUP</label>
+            <label htmlFor="ickup">PICKUP</label>
           </div>
           <br />
           <div>
@@ -83,7 +83,7 @@ function CustomerForm() {
               name="type"
               type="radio"
               id="delivery"
-              value="delivery"
+              value="Delivery"
               onChange={(evt) => setDelivery(evt.target.value)}
             ></input>
             <label htmlFor="delivery">DELIVERY</label>
