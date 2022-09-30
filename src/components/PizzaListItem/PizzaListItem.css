@@ -1,14 +1,34 @@
 .za-item-container {
-    border:  1px solid;
-    width: 250px;
+    border: 2px solid #FF0024;
+    border-radius: 2px;
     margin-bottom: 10px;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+.za-item-container:hover {
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+.za-content-container {
+    width: 250px;
     padding-top: 5px;
     font-size: 50%;
 }
 
-.za-item-container img {
+.za-content-container img {
     width: 250px;
     height: 150px;
+}
+
+hr {
+    width: 90%;
+    height: 5px;
+    background-color: #E00024;
+    border-radius: 50%;
+    border: 2px solid #669F21;
 }
 
 .za-item-textbox {
@@ -31,4 +51,6 @@
 
 button {
     width: 100%;
+    outline: none;
+    border: none;
 }
