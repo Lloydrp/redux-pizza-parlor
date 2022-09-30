@@ -34,10 +34,12 @@ function PizzaList() {
   return (
     <section>
       <h2>Step 1: Get Your Za, Broski!</h2>
-      {pizzaList.map((za) => (
-        <PizzaListItem key={za.id} za={za} />
-      ))}
-      <NextButton nextPage={nextPage}/>
+      <div className="za-list-container">
+        {pizzaList.map((za) => (
+          <PizzaListItem key={za.id} za={za} />
+        ))}
+        <NextButton nextPage={nextPage}/>
+      </div>
     </section>
   );
 }

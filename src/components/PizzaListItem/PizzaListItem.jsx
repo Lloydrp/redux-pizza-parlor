@@ -40,7 +40,7 @@ function PizzaListItem({ za }) {
   // console.log(added);
 
   return (
-    <div className="za-container">
+    <div className="za-item-container">
       <p>{za.name}</p>
       <img src={za.image_path} alt="Just a spicy pic of some za." />
       <p>{za.description}</p>
