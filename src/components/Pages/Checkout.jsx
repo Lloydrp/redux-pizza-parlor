@@ -28,6 +28,7 @@ function Checkout() {
     //History Push
     history.replace("/");
   }
+  console.log("history.length :>> ", history.length);
 
   return (
     <>
